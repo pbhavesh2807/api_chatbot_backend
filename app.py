@@ -26,9 +26,8 @@ BUCKET_NAME = "joveo-data-lake-dev"
 KNOWLEDGE_BASE_ID = "0NFDU3JJEA"
 DATA_SOURCE_ID = "RLSHWA5C0H"
 AWS_REGION = "us-east-1"
-AWS_ACCESS_KEY_ID = "ASIA6QKF7YMSJKA57PJQ"  # Replace with your actual access key
-AWS_SECRET_ACCESS_KEY = "z4o0QOQ4dnsqbtMS/mUqDiYJeCpUi47q4bl126hH"  # Replace with your actual secret key
 MODEL_ARN = "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0"
+AWS_ACCOUNT_ID = "997116068644"
 
 # Initialize Boto3 clients
 s3_client = boto3.client("s3", region_name=AWS_REGION)
