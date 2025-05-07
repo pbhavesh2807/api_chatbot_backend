@@ -15,7 +15,7 @@ app = FastAPI(title="Knowledge Base API", description="API for managing and quer
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Allows the React app running on port 3000
+    allow_origins=["http://localhost:3000","https://api-chatbot-frontend.vercel.app"],  # Allows the React app running on port 3000
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
