@@ -154,4 +154,14 @@ def query_knowledge_base(query: Query):
                 )
     except Exception as e:
         print(f"General error in query_knowledge_base: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Error querying knowledge base: {str(e)}") 
+        raise HTTPException(status_code=500, detail=f"Error querying knowledge base: {str(e)}")
+
+@app.get("/")
+def read_root():
+    """Root endpoint to verify the API is running"""
+    return {"message": "Knowledge Base API is running", "status": "online"}
+
+# This is optional but helps with Vercel deployments
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000) 
